@@ -1,31 +1,109 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link type="text/css" rel="stylesheet" href="/static/main.css" />
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  <link type = "text/css" rel ="stylesheet" href = "/bootstrap/css/bootstrap.css" />
+  <style type = "text/css">
+      body {
+        height:100%;
+        margin-top:10px;
+    padding-top: 40px;
+    padding-bottom: 70px;
+    background: rgb(36, 39, 41);
+  }
+  .login-area {
+    font-size: 13px;
+    color: rgb(255, 255, 255);
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
 
-  <title>CS 253 Blog</title>
+.main-title {
+    display: block;
+    color: rgb(255, 255, 255);
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+    text-decoration: none;
+}
+
+.post + .post {
+    margin-top: 15px;
+}
+
+.post-heading {
+    position: relative;
+    border-bottom: 3px solid #666;
+}
+
+.post-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: rgb(255, 255, 255)
+}
+
+.post-date {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    color: rgb(255, 255, 255);
+
+}
+
+.post-content {
+    margin-top: 5px;
+    color:rgb(255, 255, 255);
+}
+nav{
+  height:25px;
+}
+  </style>
+  
+  <title>Blog</title>
+
 </head>
 
 <body>
-    
-  <a style="color:orange" href="/blog" class="main-title">
-    FREEDOM SKY BLOG
-  </a>
+  
 
-  <div class="login-area">
-    {% if user %}
-      {{user.name}} (<a class="login-link" href="/logout">logout</a>)
-    {% else %}
-      <a class="login-link" href="/login">login</a>
-      |
-      <a class="login-link" href="/signup">signup</a>
-    {% endif %}
-  </div>
+    <div class="container">
+        <a role="button" href="/blog" class="btn btn-danger"><span class="glyphicon glyphicon-home"></span> Binary World</a>
 
-  <div id="content">
-  {% block content %}
-  {% endblock %}
-  </div>
+  
+        <a class="btn btn-warning" role="button" href="/blog/newpost"><span class="glyphicon glyphicon-pencil"></span>  New Post</a>
+      <div class="login-area">
+      {% if user %}
+        Welcome, {{user.name}}!  <a role="button" class="btn btn-success" href="/logout">logout</a>
+      {% else %}
+      <a role="button" class="btn btn-success" href="/login">  login  </a>
+      <a role="button" class="btn btn-info" href="/signup">signup</a>
+      {% endif %}
+      </div>
+
+      <div id="content">
+        {% block content %}
+        {% endblock %}
+      </div> 
+    </div>
+
+  <nav class="navbar navbar-default navbar-fixed-bottom" style="layout:center" role="navigation">
+  
+    <p>Created by Kai 
+                 
+    <a href="https://github.com/kevin918" ><i class="fa fa-github-alt fa-2x"></i></a>
+    <a href="https://twitter.com/kaikai918"><i class="fa fa-twitter fa-2x"> </i></a>
+    <a href="https://www.facebook.com/kai918"><i class="fa fa-facebook fa-2x"> </i></a>
+
+    <p>
+
+  </nav>
+
+
+
+
+
 </body>
 
 </html>

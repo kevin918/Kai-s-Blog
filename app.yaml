@@ -1,4 +1,4 @@
-application: kaiblog
+application: renkaiblog
 version: 1
 runtime: python27
 api_version: 1
@@ -11,9 +11,15 @@ handlers:
 
 - url: /static
   static_dir: static
+
+- url: /bootstrap
+  static_dir: bootstrap
   
 - url: .*
   script: blog.app
+
+- url: /image
+  static_dir: image
 
 libraries:
 - name: webapp2

@@ -2,10 +2,28 @@
 
 <html>
   <head>
-    <title>Unit 2 Signup</title>
+    <title>welcome</title>
+    <link type = "text/css" rel ="stylesheet" href = "/bootstrap/css/bootstrap.css" />
+    <style type = "text/css">
+      body {
+        margin-top:10px;
+    background: rgb(255, 255, 255);
+  }
+  h2 {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color:rgb(36, 39, 41);
+}
+  </style>
   </head>
 
   <body>
+  	<div class="container">
     <h2>Welcome, {{username}}!</h2>
+    <a role="button" href="/blog" class="btn btn-default">
+  <span class="glyphicon glyphicon-home"></span> Home
+</a>
+	</div>
   </body>
 </html>

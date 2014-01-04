@@ -145,6 +145,7 @@ class Post(db.Model):
         d = {'subject': self.subject,
              'content': self.content,
              'created': self.created.strftime(time_fmt),
+             
              'last_modified': self.last_modified.strftime(time_fmt)}
         return d
 

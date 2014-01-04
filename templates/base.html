@@ -4,9 +4,9 @@
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
   <link type = "text/css" rel ="stylesheet" href = "/bootstrap/css/bootstrap.css" />
   <style type = "text/css">
-      body {
-        height:100%;
-        margin-top:10px;
+  body {
+    height:100%;
+    margin-top:10px;
     padding-top: 40px;
     padding-bottom: 70px;
     background: rgb(36, 39, 41);
@@ -18,17 +18,6 @@
     top: 10px;
     right: 10px;
 }
-
-.main-title {
-    display: block;
-    color: rgb(255, 255, 255);
-    font-size: 40px;
-    font-weight: bold;
-    text-align: center;
-    margin-bottom: 30px;
-    text-decoration: none;
-}
-
 .post + .post {
     margin-top: 15px;
 }
@@ -51,7 +40,6 @@
     color: rgb(255, 255, 255);
 
 }
-
 .post-content {
     margin-top: 5px;
     color:rgb(255, 255, 255);
@@ -70,9 +58,9 @@ nav{
 
     <div class="container">
         <a role="button" href="/blog" class="btn btn-danger"><span class="glyphicon glyphicon-home"></span> Binary World</a>
-
-  
         <a class="btn btn-warning" role="button" href="/blog/newpost"><span class="glyphicon glyphicon-pencil"></span>  New Post</a>
+        <a class="fa fa-rss lg" role="i" href="/blog.json"> RSS</a>
+
       <div class="login-area">
       {% if user %}
         Welcome, {{user.name}}!  <a role="button" class="btn btn-success" href="/logout">logout</a>
@@ -89,7 +77,8 @@ nav{
     </div>
 
   <nav class="navbar navbar-default navbar-fixed-bottom" role="navigation"> 
-    <p>Created by Kai                 
+    <p>Created by Kai
+                   
     <a href="https://github.com/kevin918" ><i class="fa fa-github-alt fa-2x"></i></a>
     <a href="https://twitter.com/kaikai918"><i class="fa fa-twitter fa-2x"> </i></a>
     <a href="https://www.facebook.com/kai918"><i class="fa fa-facebook fa-2x"> </i></a>

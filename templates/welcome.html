@@ -4,6 +4,7 @@
   <head>
     <title>welcome</title>
     <link type = "text/css" rel ="stylesheet" href = "/bootstrap/css/bootstrap.css" />
+    
     <style type = "text/css">
       body {
         margin-top:10px;
@@ -14,11 +15,24 @@
     font-weight: bold;
     margin-bottom: 20px;
     color:rgb(36, 39, 41);
+
+    .fullscreen_bg {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-image: url('/image/001.jpg');
+  }
+
 }
   </style>
   </head>
 
   <body>
+    <div id="fullscreen_bg" class="fullscreen_bg"/>
   	<div class="container">
     <h2>Welcome, {{username}}!</h2>
     <a role="button" href="/blog" class="btn btn-default">

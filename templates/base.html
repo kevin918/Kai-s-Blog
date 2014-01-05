@@ -1,20 +1,48 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet"/>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script>
+</head>
   <link type = "text/css" rel ="stylesheet" href = "/bootstrap/css/bootstrap.css" />
   <style type = "text/css">
-  body {
-    height:100%;
-    background: rgb(36, 39, 41);
-  }
-  .login-area {
-    font-size: 13px;
-    color: rgb(255, 255, 255);
-    position: absolute;
-    top: 10px;
-    right: 10px;
+
+html,
+body {
+  height: 100%;
+  background: rgb(36, 39, 41);
 }
+
+/* Wrapper for page content to push down footer */
+#wrap {
+  min-height: 100%;
+  height: auto;
+  /* Negative indent footer by its height */
+  margin: 0 auto -60px;
+  /* Pad bottom by footer height */
+  padding: 0 0 60px;
+}
+nav{
+  background: rgb(36, 39, 41);
+}
+/* Set the fixed height of the footer here */
+
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+#wrap > .container {
+  padding: 60px 15px 0;
+}
+.container .text-muted {
+  margin: 20px 0;
+}
+
 .post + .post {
     margin-top: 15px;
 }
@@ -27,13 +55,11 @@
     font-weight: bold;
     color: orange
 }
-
 .post-date {
     position: absolute;
     right: 0px;
     bottom: 0px;
     color: pink;
-
 }
 .post-content {
     margin-top: 5px;
@@ -44,55 +70,54 @@
   <title>Blog</title>
 </head>
 <body>
-   
-        <nav class="navbar navbar-default" role="navigation">
+   <div id="wrap">
+  <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class ="container">
   <!-- Brand and toggle get grouped for better mobile display -->
-  <div class="navbar-header">
-    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-      <span class="sr-only">Toggle navigation</span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-    </button>
-    <a class="navbar-brand" href="#"></a>
-  </div>
-
-  <!-- Collect the nav links, forms, and other content for toggling -->
-  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-    <ul class="nav navbar-nav">
-      <li><a href="/blog"><span class="glyphicon glyphicon-home"></span>  Home</a></li>
-      <li><a href="/blog/newpost"><span class="glyphicon glyphicon-pencil"></span>  New Post</a></li>
-      <li><a class="fa fa-rss lg" role="i" href="/blog.json"> RSS</a></li>
-        </ul>
-      </li>
-    </ul>
-    
-    <ul class="nav navbar-nav navbar-right">
-      <li><a href="#">
-        {% if user%}
-        Welcome, {{user.name}}!
-      </a></li>
-      <li><a href="/logout">
-        logout</a>
-      </li>
-      {% else %}
-      <li><a href="/login">login</a></li>
-      <li><a href="/signup">signup</a></li>
-      {% endif %}
-    </ul>
-  </div><!-- /.navbar-collapse -->
-</nav>
- <div class="container">
-      <div id="content">
-        {% block content %}
-        {% endblock %}
-      </div> 
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Binary World</a>
     </div>
 
-  <nav class="navbar navbar-default navbar-fixed-bottom" role="navigation"> 
-    <div class="container">
-      <ul class="nav navbar-nav navbar-right">  
+  <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="/blog"><span class="glyphicon glyphicon-home"></span>  Home</a></li>
+        <li><a href="/blog/newpost"><span class="glyphicon glyphicon-pencil"></span>  New Post</a></li>
+        <li><a class="fa fa-rss lg" role="i" href="/blog.json"> RSS</a></li>
+      </ul> 
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">
+        {% if user%}
+        Welcome, {{user.name}}!
+        </a></li>
+        <li><a href="/logout">logout</a></li>
+        {% else %}
+        <li><a href="/login">login</a></li>
+        <li><a href="/signup">signup</a></li>
+        {% endif %}
+      </ul>
+    </div><!-- /.navbar-collapse -->
+</div><!-- /.container-->
+</div>
 
+  <div class="container">
+    <div id="content">
+        {% block content %}
+        {% endblock %}
+    </div> 
+  </div>
+</div>
+  
+    <nav class="navbar navbar-default navbar-static-bottom" role="navigation">
+    <div class="container">
+      <p class="text-muted nav navbar-nav">Made by Kai R. 2014</p>
+      <ul class="nav navbar-nav navbar-right">
     <li><a href="https://github.com/kevin918" ><i class="fa fa-github-alt fa-2x"></i></a></li>
     <li><a href="https://twitter.com/kaikai918"><i class="fa fa-twitter fa-2x"></i></a></li>
     <li><a href="https://www.facebook.com/kai918"><i class="fa fa-facebook fa-2x"></i></a></li>
@@ -100,7 +125,9 @@
     </ul>
   </div>
 </nav>
-</body>
 
+  <script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+  <script type ="text/javascript" src="/bootstrap/js/bootstrap.min.js"></script>
+ </body>
 </html>
 

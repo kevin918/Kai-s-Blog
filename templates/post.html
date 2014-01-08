@@ -1,25 +1,8 @@
-<!--div class="post">
-  <div class="post-heading">
-    <div class="post-title">
-      {{p.subject}} 
-    </div>
-
-    <div class="post-date">
-      {{p.created.strftime("%b %d, %Y")}}
-    </div>
-  </div>
-
-  <div class="post-content">
-    {{p._render_text | safe}}
-  </div>
-</div-->
-
-
 <div class="panel panel-success">
   <div class="panel-heading">
     <h3 class="panel-title">
         {{p.subject}}
-        <p class="pull-right">{{p.created.strftime("%b %d, %Y")}}</p>
+        <p class="pull-right"> {{p.created.strftime("%b %d, %Y")}}</p>
     </h3>
 
   </div>
@@ -27,7 +10,5 @@
     {{p._render_text | safe}}
   </div>
 </div>
-
-
 
 

@@ -11,11 +11,10 @@
 </head>
   <link type = "text/css" rel ="stylesheet" href = "/bootstrap/css/bootstrap.css" />
   <style type = "text/css">
-
 html,
 body {
   height: 100%;
-  background: rgb( 36, 115, 100);
+  background: #CFE9F5;
 }
 
 /* Wrapper for page content to push down footer */
@@ -27,15 +26,6 @@ body {
   /* Pad bottom by footer height */
   padding: 0 0 60px;
 }
-nav{
-  background: rgb(36, 39, 41);
-}
-/* Set the fixed height of the footer here */
-
-/* Custom page CSS
--------------------------------------------------- */
-/* Not required for template or sticky footer method. */
-
 #wrap > .container {
   padding: 60px 15px 0;
 }
@@ -58,7 +48,7 @@ nav{
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Binary World</a>
+      <a class="navbar-brand" href="#">Ashitaka</a>
     </div>
 
   <!-- Collect the nav links, forms, and other content for toggling -->
@@ -69,8 +59,8 @@ nav{
         <li><a class="fa fa-rss lg" role="i" href="/blog.json"> RSS</a></li>
       </ul> 
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">
         {% if user%}
+        <li><a href="">
         Welcome, {{user.name}}!
         </a></li>
         <li><a href="/logout">logout</a></li>
@@ -90,21 +80,21 @@ nav{
     </div> 
   </div>
 </div>
-  
-    <nav class="navbar navbar-default navbar-static-bottom" role="navigation">
+    <nav class="navbar navbar-inverse navbar-static-bottom" role="navigation">
     <div class="container">
       <p class="text-muted nav navbar-nav">Made by Kai R. 2014</p>
       <ul class="nav navbar-nav navbar-right">
-    <li><a href="https://github.com/kevin918" ><i class="fa fa-github-alt fa-2x"></i></a></li>
-    <li><a href="https://twitter.com/kaikai918"><i class="fa fa-twitter fa-2x"></i></a></li>
-    <li><a href="https://www.facebook.com/kai918"><i class="fa fa-facebook fa-2x"></i></a></li>
+    <li><a href="https://github.com/kevin918" ><i class="fa fa-github-square fa-2x"></i></a></li>
+    <li><a href="https://twitter.com/kaikai918"><i class="fa fa-twitter-square fa-2x"></i></a></li>
+    <li><a href="https://www.facebook.com/kai918"><i class="fa fa-facebook-square fa-2x"></i></a></li>
+    <li><a href="http://kevin918.tumblr.com/"><i class="fa fa-tumblr-square fa-2x"></i></a></li>
 
     </ul>
   </div>
 </nav>
 
-  <script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
   <script type ="text/javascript" src="/bootstrap/js/bootstrap.min.js"></script>
+  
  </body>
 </html>
 

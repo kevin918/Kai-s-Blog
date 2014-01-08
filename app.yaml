@@ -11,12 +11,11 @@ handlers:
 
 - url: /bootstrap
   static_dir: bootstrap
+- url: /Flat-UI-master
+  static_dir: Flat-UI-master
   
 - url: .*
   script: blog.app
-
-- url: /image
-  static_dir: image
 
 libraries:
 - name: webapp2

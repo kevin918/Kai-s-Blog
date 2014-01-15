@@ -9,10 +9,8 @@ handlers:
   static_files: favicon.ico
   upload: favicon\.ico
 
-- url: /bootstrap
-  static_dir: bootstrap
-- url: /Flat-UI-master
-  static_dir: Flat-UI-master
+- url: /static
+  static_dir: static
   
 - url: .*
   script: blog.app

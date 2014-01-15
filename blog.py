@@ -297,7 +297,11 @@ class Welcome(BlogHandler):
             self.render('welcome.html', username = username)
         else:
             self.redirect('/unit2/signup')
-
+            
+class Glee(BlogHandler):
+    def get(self):
+        self.render('glee.html')
+        
 app = webapp2.WSGIApplication([('/', MainPage),
                                ('/unit2/signup', Unit2Signup),
                                ('/unit2/welcome', Welcome),
@@ -308,5 +312,6 @@ app = webapp2.WSGIApplication([('/', MainPage),
                                ('/login', Login),
                                ('/logout', Logout),
                                ('/unit3/welcome', Unit3Welcome),
+                               ('/glee', Glee)
                                ],
                               debug=True)
